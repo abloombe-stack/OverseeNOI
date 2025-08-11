@@ -1,0 +1,13 @@
+{
+  "name": "overseenoI-monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "echo 'Bolt will replace with turbo dev'",
+    "build": "echo 'Bolt will replace with turbo build'",
+    "test": "echo 'Bolt will set up tests'"
+  }
+}
