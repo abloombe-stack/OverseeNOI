@@ -1,15 +1,22 @@
 {
   "name": "oversee-noi",
+  "version": "1.0.0",
+  "description": "Slack-style task management for real estate asset management",
   "private": true,
+  "workspaces": [
+    "packages/shared"
+  ],
   "scripts": {
     "dev": "next dev -p 3000",
-    "build": "prisma generate && next build",
+    "build": "npm run build:shared && prisma generate && next build",
+    "build:shared": "cd packages/shared && npm run build",
     "start": "next start -p 3000",
-    "postinstall": "prisma generate",
+    "postinstall": "npm run build:shared && prisma generate",
     "migrate": "prisma migrate deploy",
     "test": "node ./tests/smoke.mjs"
   },
   "dependencies": {
+    "@oversee-noi/shared": "workspace:*",
     "@prisma/client": "^5.16.1",
     "bcryptjs": "^2.4.3",
     "cookie": "^0.6.0",
