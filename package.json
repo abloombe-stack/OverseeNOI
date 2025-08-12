@@ -8,6 +8,7 @@
     "build": "cd apps/frontend && npm run build",
     "start": "cd apps/frontend && npm run start",
     "lint": "cd apps/frontend && npm run lint"
+    "lint": "cd apps/frontend && npm run lint"
   },
   "engines": { "node": ">=18.18.0" }
 }
