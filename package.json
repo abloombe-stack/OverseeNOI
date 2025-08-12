@@ -11,8 +11,8 @@
     "build": "npm run build:shared && prisma generate && next build",
     "build:shared": "cd packages/shared && npm run build",
     "start": "next start -p 3000",
-    "postinstall": "npm run build:shared && prisma generate",
-    "migrate": "prisma migrate deploy",
+    "postinstall": "npm run build:shared && npx prisma generate",
+    "migrate": "npx prisma migrate deploy",
     "test": "node ./tests/smoke.mjs"
   },
   "dependencies": {
