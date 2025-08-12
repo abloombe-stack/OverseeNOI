@@ -1,13 +1,10 @@
 {
   "name": "oversee-noi",
   "private": true,
-  "workspaces": ["apps/*", "packages/*"],
   "scripts": {
-    "postinstall": "cd apps/frontend && npm install",
     "dev": "cd apps/frontend && npm run dev",
     "build": "cd apps/frontend && npm run build",
     "start": "cd apps/frontend && npm run start",
-    "lint": "cd apps/frontend && npm run lint"
     "lint": "cd apps/frontend && npm run lint"
   },
   "engines": { "node": ">=18.18.0" }
