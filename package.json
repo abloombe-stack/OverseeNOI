@@ -1,11 +1,31 @@
 {
   "name": "oversee-noi",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "node -e \"process.chdir('apps/frontend'); require('child_process').spawn('npm',['run','dev'],{stdio:'inherit'})\"",
-    "build": "node -e \"process.chdir('apps/frontend'); require('child_process').spawn('npm',['run','build'],{stdio:'inherit'})\"",
-    "start": "node -e \"process.chdir('apps/frontend'); require('child_process').spawn('npm',['run','start'],{stdio:'inherit'})\"",
-    "lint": "node -e \"process.chdir('apps/frontend'); require('child_process').spawn('npm',['run','lint'],{stdio:'inherit'})\""
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "lint": "next lint"
   },
-  "engines": { "node": ">=18.18.0" }
+  "engines": { "node": ">=18.18.0" },
+  "dependencies": {
+    "autoprefixer": "^10.4.18",
+    "axios": "^1.7.2",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.453.0",
+    "next": "15.1.6",
+    "postcss": "^8.4.33",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "socket.io-client": "^4.7.5",
+    "tailwindcss": "^3.4.7",
+    "@tanstack/react-query": "^5.51.1",
+    "zustand": "^4.5.4"
+  },
+  "devDependencies": {
+    "eslint": "^9.6.0",
+    "eslint-config-next": "^15.1.6",
+    "typescript": "^5.4.5"
+  }
 }

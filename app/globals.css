@@ -2,13 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { 
-  --ring: 59,130,246; 
-}
-
-.line-clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
+html, body, #__next { height: 100%; }
