@@ -1,43 +1,13 @@
 {
   "name": "oversee-noi",
-  "version": "1.0.0",
-  "description": "Slack-style task management for real estate asset management",
   "private": true,
+  "workspaces": ["apps/*", "packages/*"],
   "scripts": {
-    "dev": "next dev -p 3000",
-    "build": "npx prisma generate && next build",
-    "start": "next start -p 3000",
-    "postinstall": "npx prisma generate",
-    "migrate": "npx prisma migrate deploy",
-    "test": "node ./tests/smoke.mjs"
+    "postinstall": "cd apps/frontend && npm install",
+    "dev": "cd apps/frontend && npm run dev",
+    "build": "cd apps/frontend && npm run build",
+    "start": "cd apps/frontend && npm run start",
+    "lint": "cd apps/frontend && npm run lint"
   },
-  "dependencies": {
-    "@prisma/client": "^5.16.1",
-    "bcryptjs": "^2.4.3",
-    "cookie": "^0.6.0",
-    "jose": "^5.3.0",
-    "lucide-react": "^0.441.0",
-    "next": "14.2.5",
-    "nodemailer": "^6.9.13",
-    "papaparse": "^5.4.1",
-    "prisma": "^5.16.1",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "resend": "^3.3.0",
-    "stripe": "^14.25.0",
-    "zod": "^3.23.8"
-  },
-  "devDependencies": {
-    "@types/node": "^20.14.9",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "@types/bcryptjs": "^2.4.6",
-    "@types/cookie": "^0.6.0",
-    "@types/nodemailer": "^6.4.15",
-    "@types/papaparse": "^5.3.14",
-    "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.39",
-    "tailwindcss": "^3.4.4",
-    "typescript": "^5.5.4"
-  }
+  "engines": { "node": ">=18.18.0" }
 }
