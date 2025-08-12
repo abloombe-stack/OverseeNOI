@@ -2,10 +2,10 @@
   "name": "oversee-noi",
   "private": true,
   "scripts": {
-    "dev": "cd apps/frontend && npm run dev",
-    "build": "cd apps/frontend && npm run build",
-    "start": "cd apps/frontend && npm run start",
-    "lint": "cd apps/frontend && npm run lint"
+    "dev": "node -e \"process.chdir('apps/frontend'); require('child_process').spawn('npm',['run','dev'],{stdio:'inherit'})\"",
+    "build": "node -e \"process.chdir('apps/frontend'); require('child_process').spawn('npm',['run','build'],{stdio:'inherit'})\"",
+    "start": "node -e \"process.chdir('apps/frontend'); require('child_process').spawn('npm',['run','start'],{stdio:'inherit'})\"",
+    "lint": "node -e \"process.chdir('apps/frontend'); require('child_process').spawn('npm',['run','lint'],{stdio:'inherit'})\""
   },
   "engines": { "node": ">=18.18.0" }
 }
